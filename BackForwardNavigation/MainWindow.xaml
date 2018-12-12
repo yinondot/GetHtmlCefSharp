@@ -1,0 +1,13 @@
+﻿<Window x:Class="BackForwardNavigation.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:BackForwardNavigation" xmlns:cefsharp='clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf' mc:Ignorable="d" Title="BackForwardNavigation" Height="450" Width="800">
+  <Grid>
+    <DockPanel>
+      <DockPanel LastChildFill='True' DockPanel.Dock='Top'>
+        <Button Content='&lt;Back' Name='btnBack' Click='btnBack_Click'></Button>
+        <Button Content='Navigate' Name='btnNavigate' Click='Navigate_Click'></Button>
+        <Button Content='Forward&gt;' Name='btnForward' Click='btnForward_Click'></Button>
+        <TextBox Name='AddressBox' Background='AliceBlue'></TextBox>
+      </DockPanel>
+      <cefsharp:ChromiumWebBrowser Name='Browser' Address='https://www.nasdaq.com'></cefsharp:ChromiumWebBrowser>
+    </DockPanel>
+  </Grid>
+</Window>
